@@ -6,7 +6,7 @@
 - Working with vLLM, TensorRT / TensorRT-LLM, Triton, CUDA C++, FP8/INT4 and Nsight profiling
 - Every result I publish is measured, logged and reproducible, from a single RTX 4090 up to an RTX 5090
 - Open to Inference Engineer, ML Systems and AI Engineer roles
-- Reach me: [samruddhichitnis02@gmail.com] · [LinkedIn](https://www.linkedin.com/in/samruddhi-chitnis/)
+- Reach me: [samruddhichitnis02@gmail.com](mailto:samruddhichitnis02@gmail.com) · [LinkedIn](https://www.linkedin.com/in/samruddhi-chitnis/)
 
 
 ### Featured work
