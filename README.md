@@ -2,15 +2,18 @@
 
 **ML Systems / Inference Engineer** · Master's student at San José State University · San Jose, CA
 
-I make LLMs run faster, cheaper and in less GPU memory, and I back every claim with numbers measured on real hardware.
+I like finding out where the milliseconds go when a model runs on a GPU.
 
-- Pushed **6,272 tokens/s** out of a single RTX 4090 with vLLM, **106x** a plain Hugging Face pipeline → [squeeze-the-4090](https://github.com/samruddhichitnis02/squeeze-the-4090)
-- Took a Llama-style model from **12% to 64% MFU** with hand-written Triton/CUDA kernels and FP8 → [llm-training-performance](https://github.com/samruddhichitnis02/llm-training-performance)
-- Wrote a CUDA matrix-multiply kernel from scratch that reaches **66% of cuBLAS** → [cuda-gemm-optimization-lab](https://github.com/samruddhichitnis02/cuda-gemm-optimization-lab)
-- Cut BERT's inference graph **in half (1,231 → 599 nodes)** with custom ONNX fusion passes, checked against TensorRT → [FuseRT](https://github.com/samruddhichitnis02/FuseRT)
-- Now: shrinking the **KV cache** of Llama-3.1-8B for long-context inference (master's capstone) → [298a-kv-cache-compression](https://github.com/samruddhichitnis02/298a-kv-cache-compression)
-- Open to Inference Engineer, ML Systems and AI Engineer roles
-- Reach me: [samruddhichitnis02@gmail.com](mailto:samruddhichitnis02@gmail.com) · [LinkedIn](https://www.linkedin.com/in/samruddhi-chitnis/)
+Most of my projects start with a simple question and end with a profiler open:
+
+- **How much can one RTX 4090 actually serve?** About 6,300 tokens/s with vLLM, 106x a plain Hugging Face pipeline. Under heavy load the GPU wasn't the bottleneck; the Python API layer was. ([squeeze-the-4090](https://github.com/samruddhichitnis02/squeeze-the-4090))
+- **Can I write a matrix multiply that gets close to cuBLAS?** 66% of it, after four versions and a lot of Nsight Compute. ([cuda-gemm-optimization-lab](https://github.com/samruddhichitnis02/cuda-gemm-optimization-lab))
+- **Does hand-fusing a BERT graph beat TensorRT?** Not really. I cut the graph from 1,231 nodes to 599, and TensorRT was already doing most of it. ([FuseRT](https://github.com/samruddhichitnis02/FuseRT))
+- **How far can a training step go with my own kernels?** From 12% to 64% MFU on a Llama-style model, using Triton, CUDA C++ and FP8. ([llm-training-performance](https://github.com/samruddhichitnis02/llm-training-performance))
+
+Right now, for my master's capstone, I'm comparing five recent KV-cache compression methods on Llama-3.1-8B at the same memory budget, to see which ones still hold up on long documents. ([298a-kv-cache-compression](https://github.com/samruddhichitnis02/298a-kv-cache-compression))
+
+I'm looking for Inference Engineer and ML Systems roles. Reach me at [samruddhichitnis02@gmail.com](mailto:samruddhichitnis02@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/samruddhi-chitnis/).
 
 ### Skills
 
